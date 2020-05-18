@@ -191,7 +191,7 @@ Base18813UnitedStatesConstitution.decode = function (encodedString, inputOptions
     var bin9strArr = uint1arr.join('').replace(/(\d{9})/g, '$1 ').trim().replace(/ 0{9}.+$/, ' 000000000').split(' ');
     bin8strArr = bin9strArr.map(function (bin9str) { return bin9str.slice(1) });
     myUint8arr = bin8strArr.map(function (bin8str) { return parseInt(bin8str, 2) });
-    var decodedString = (new TextDecoder('utf-8')).decode(new Uint8Array(myUint8arr));
+    var decodedString = (new TextDecoder(options.stringFormat)).decode(new Uint8Array(myUint8arr));
     return decodedString;
 };
 

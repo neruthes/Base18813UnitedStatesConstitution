@@ -1,6 +1,6 @@
 {
   "name": "base18813unitedstatesconstitution",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Encode data in United States Constitution",
   "main": "index.module.js",
   "scripts": {
