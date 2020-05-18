@@ -176,7 +176,8 @@ Base18813UnitedStatesConstitution.decode = function (encodedString, inputOptions
     console.log('<< DECODER >>');
     // Options initialization
     var options = {
-        format: 'string.UTF-8'
+        format: 'string',
+        stringFormat: 'utf-8'
     };
     // Override options
     if (inputOptions instanceof Object) {

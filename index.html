@@ -177,13 +177,19 @@
 	</div>
 	<script>
 	var btn_encodeBUsc = function () {
-		document.getElementById('ta-output').value = Base18813UnitedStatesConstitution.encodeString(document.getElementById('ta-input').value);
-		document.getElementById('ta-output').select();
-	}
+        document.getElementById('ta-output').value = '';
+		setTimeout(function () {
+            document.getElementById('ta-output').value = Base18813UnitedStatesConstitution.encodeString(document.getElementById('ta-input').value);
+    		document.getElementById('ta-output').select();
+        }, 150);
+	};
 	var btn_decodeBUsc = function () {
-		document.getElementById('ta-output').value = Base18813UnitedStatesConstitution.decode(document.getElementById('ta-input').value);
-		document.getElementById('ta-output').select();
-	}
+        document.getElementById('ta-output').value = '';
+        setTimeout(function () {
+    		document.getElementById('ta-output').value = Base18813UnitedStatesConstitution.decode(document.getElementById('ta-input').value);
+    		document.getElementById('ta-output').select();
+        }, 150);
+	};
 
 	document.getElementById('ta-input').value = '苟利国家生死以，岂因祸福避趋之。';
 
