@@ -1,0 +1,24 @@
+{
+  "name": "base18813unitedstatesconstitution",
+  "version": "1.0.1",
+  "description": "Encode data in United States Constitution",
+  "main": "index.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://neruthes@github.com/neruthes/Base18813UnitedStatesConstitution.git"
+  },
+  "keywords": [
+    "encoding",
+    "base64",
+    "base18813"
+  ],
+  "author": "Neruthes",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/neruthes/Base18813UnitedStatesConstitution/issues"
+  },
+  "homepage": "https://github.com/neruthes/Base18813UnitedStatesConstitution#readme"
+}

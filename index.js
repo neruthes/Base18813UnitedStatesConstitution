@@ -122,7 +122,6 @@ and deputy from Virginia
 `;
 
 Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOptions) {
-    console.log('<< ENCODER >>');
     // Options initialization
     var options = {
         header: 'Decode United States Constitution with https://neruthes.xyz/Base18813UnitedStatesConstitution/ ... ',
@@ -132,7 +131,6 @@ Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOpt
     if (inputOptions instanceof Object) {
         Object.keys(inputOptions).map(function (key) { options[key] = inputOptions[key]; });
     };
-    console.log('inputString.length', inputString.length);
     // Convert to Uint8Array
     var uint8arr = (new TextEncoder('utf-8')).encode(inputString);
 	var safeUint8Arr = [];
@@ -157,8 +155,6 @@ Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOpt
 	var bin9strArr = safeUint8Arr.map(function (uint8, i) {
         return encodeByte(uint8, false, i);
     }).concat(encodeByte(0x00, true));
-    console.log('bin9strArr');
-    console.log(bin9strArr);
     var usedTemplate_ARR = realTemplate.slice(0, uint1arr.length);
     var unusedTemplate_STR = realTemplate.slice(uint1arr.length).join('');
     var encodingEnvelope = usedTemplate_ARR.map(function (char, i) {
@@ -173,7 +169,6 @@ Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOpt
 };
 
 Base18813UnitedStatesConstitution.decode = function (encodedString, inputOptions) {
-    console.log('<< DECODER >>');
     // Options initialization
     var options = {
         format: 'string',
@@ -194,16 +189,9 @@ Base18813UnitedStatesConstitution.decode = function (encodedString, inputOptions
         };
     });
     var bin9strArr = uint1arr.join('').replace(/(\d{9})/g, '$1 ').trim().replace(/ 0{9}.+$/, ' 000000000').split(' ');
-    console.log('bin9strArr');
-    console.log(bin9strArr);
     bin8strArr = bin9strArr.map(function (bin9str) { return bin9str.slice(1) });
-    console.log('bin8strArr');
-    console.log(bin8strArr);
     myUint8arr = bin8strArr.map(function (bin8str) { return parseInt(bin8str, 2) });
     var decodedString = (new TextDecoder('utf-8')).decode(new Uint8Array(myUint8arr));
-    console.log('decodedString');
-    console.log(decodedString);
-    console.log('decodedString.length', decodedString.length);
     return decodedString;
 };
 
@@ -235,3 +223,5 @@ Base18813UnitedStatesConstitution.selfTest = function () {
         console.log(`${myTestStrings.length - result} tests passed. ${result} tests failed.`);
     };
 };
+
+module.exports = Base18813UnitedStatesConstitution;

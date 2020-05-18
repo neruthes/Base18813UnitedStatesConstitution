@@ -48,6 +48,10 @@ Notes:
 
 Try at [neruthes.xyz/Base18813UnitedStatesConstitution/](https://neruthes.xyz/Base18813UnitedStatesConstitution/).
 
+## Package Management Tools
+
+- NPM: https://www.npmjs.com/package/base18813unitedstatesconstitution
+
 ## Copyright
 
 Copyright (c) 2020 Neruthes <[neruthes.xyz](https://neruthes.xyz)>.
