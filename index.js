@@ -124,7 +124,7 @@ and deputy from Virginia
 Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOptions) {
     // Options initialization
     var options = {
-        header: 'Decode United States Constitution with https://neruthes.xyz/Base18813UnitedStatesConstitution/ ... ',
+        header: 'Decode United States Constitution with https:// neruthes.xyz /Base18813UnitedStatesConstitution/ — ',
         trimming: 42
     };
     // Override options
