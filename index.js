@@ -124,7 +124,7 @@ and deputy from Virginia
 Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOptions) {
     // Options initialization
     var options = {
-        header: 'Decode United States Constitution with https:// neruthes.xyz /Base18813UnitedStatesConstitution/ — ',
+        header: 'Decode United States Constitution with https:// neruthes.xyz /Base18813UnitedStatesConstitution/ — \n',
         trimming: 42
     };
     // Override options
@@ -164,7 +164,7 @@ Base18813UnitedStatesConstitution.encodeString = function (inputString, inputOpt
             return char.toLowerCase();
         };
     }).join('');
-    var finalResult = options.header + encodingEnvelope + unusedTemplate_STR.slice(0, options.trimming);
+    var finalResult = options.header + encodingEnvelope + unusedTemplate_STR.slice(0, options.trimming).trimRight() + '...';
     return finalResult;
 };
 
